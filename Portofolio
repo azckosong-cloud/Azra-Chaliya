@@ -1,42 +1,72 @@
-# Simple Parking System (Beginner Level)
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azra Chaliya — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img class="avatar" src="https://via.placeholder.com/120" alt="Foto Profil" />
+      <div class="intro">
+        <h1>Azra Chaliya</h1>
+        <p class="Student">Bio singkat: developer, student, atau deskripsi 1-2 kalimat.</p>
+        <p class="081233454786">
+          <a href="mailto:email@example.com">email@example.com</a> •
+          <a href="https://github.com/azckosong-cloud">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </header>
 
-print("=== PARKING SYSTEM ===")
+  <main class="container">
+    <section id="Pesikolog">
+      <h2>Tentang Saya</h2>
+      <p>Perkenalan singkat tentang kemampuan, bahasa pemrograman, dan apa yang kamu kerjakan.</p>
+    </section>
 
-cars = []
+    <section id="projects">
+      <h2>Proyek</h2>
 
-while True:
-    print("\nMenu:")
-    print("1. Add Car")
-    print("2. Remove Car")
-    print("3. View Parking Data")
-    print("4. Exit")
+      <article class="project">
+        <h3><a href="#">Simple Parking System (CLI)</a></h3>
+        <p>Sebuah program Python CLI untuk menambah dan menghapus plat mobil di area parkir.</p>
+        <p><small>Repository: <a href="https://github.com/azckosong-cloud/Azra-Chaliya">Azra-Chaliya</a></small></p>
+      </article>
 
-    choice = input("Choose menu (1-4): ")
+      <article class="project">
+        <h3><a href="#">Project 2</a></h3>
+        <p>Deskripsi singkat project kedua. Tambahkan link jika ada demo atau repo.</p>
+      </article>
 
-    if choice == "1":
-        plate = input("Enter car plate number: ")
-        cars.append(plate)
-        print("Car added successfully.")
+      <!-- Tambah project lain sesuai kebutuhan -->
+    </section>
 
-    elif choice == "2":
-        plate = input("Enter plate number to remove: ")
-        if plate in cars:
-            cars.remove(plate)
-            print("Car removed successfully.")
-        else:
-            print("Car not found.")
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>HTML & CSS</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
 
-    elif choice == "3":
-        print("\nCars in Parking Area:")
-        if len(cars) == 0:
-            print("Parking is empty.")
-        else:
-            for i in range(len(cars)):
-                print(f"{i + 1}. {cars[i]}")
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Ingin berkolaborasi atau ada pertanyaan? <a href="mailto:email@example.com">Kirim email</a>.</p>
+    </section>
+  </main>
 
-    elif choice == "4":
-        print("Thank you for using the parking system.")
-        break
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nama Kamu — Built with GitHub Pages</p>
+    </div>
+  </footer>
 
-    else:
-        print("Invalid choice. Please select 1-4.")
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
