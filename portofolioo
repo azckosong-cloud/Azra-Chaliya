@@ -1,0 +1,42 @@
+# Simple Parking System (Beginner Level)
+
+print("=== PARKING SYSTEM ===")
+
+cars = []
+
+while True:
+    print("\nMenu:")
+    print("1. Add Car")
+    print("2. Remove Car")
+    print("3. View Parking Data")
+    print("4. Exit")
+
+    choice = input("Choose menu (1-4): ")
+
+    if choice == "1":
+        plate = input("Enter car plate number: ")
+        cars.append(plate)
+        print("Car added successfully.")
+
+    elif choice == "2":
+        plate = input("Enter plate number to remove: ")
+        if plate in cars:
+            cars.remove(plate)
+            print("Car removed successfully.")
+        else:
+            print("Car not found.")
+
+    elif choice == "3":
+        print("\nCars in Parking Area:")
+        if len(cars) == 0:
+            print("Parking is empty.")
+        else:
+            for i in range(len(cars)):
+                print(f"{i + 1}. {cars[i]}")
+
+    elif choice == "4":
+        print("Thank you for using the parking system.")
+        break
+
+    else:
+        print("Invalid choice. Please select 1-4.")
